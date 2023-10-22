@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "18f8444e-b4ad-441b-8008-2ae38a0e1f01",
+		"name": "Kredit Plus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20646341"
+	},
+	"item": [
+		{
+			"name": "generate token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9191/api/v1/gen-token",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"api",
+						"v1",
+						"gen-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check limit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAbWFpbC5jb20iLCJsZXZlbCI6ImFwcGxpY2F0aW9uIn0.QUxVNdKcxYxv4clN6hNZXo-t4grvqs1shgBqu7I75nY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9191/api/v1/check-limits?nik=12345678901",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"api",
+						"v1",
+						"check-limits"
+					],
+					"query": [
+						{
+							"key": "nik",
+							"value": "12345678901"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAbWFpbC5jb20iLCJsZXZlbCI6ImFwcGxpY2F0aW9uIn0.QUxVNdKcxYxv4clN6hNZXo-t4grvqs1shgBqu7I75nY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9191/api/v1/get-customer?nik=12345678901",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"api",
+						"v1",
+						"get-customer"
+					],
+					"query": [
+						{
+							"key": "nik",
+							"value": "12345678901"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create transaction",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAbWFpbC5jb20iLCJsZXZlbCI6ImFwcGxpY2F0aW9uIn0.QUxVNdKcxYxv4clN6hNZXo-t4grvqs1shgBqu7I75nY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nik",
+							"value": "12345678901",
+							"type": "text"
+						},
+						{
+							"key": "otr",
+							"value": "500000",
+							"type": "text"
+						},
+						{
+							"key": "tenor",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "asset_type",
+							"value": "motor",
+							"type": "text"
+						},
+						{
+							"key": "asset_name",
+							"value": "NMAX",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:9191/api/v1/create-transaction",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"api",
+						"v1",
+						"create-transaction"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -26,3 +26,13 @@ func CekDataUser(NIK string) (models.Consumer, error) {
 
 	return obj, nil
 }
+
+func CreateTransaction(data models.Transaction) (models.Transaction, error) {
+	db := db.CreateCon()
+	err := db.Debug().Create(&data).Error
+	if err != nil {
+		return data, err
+	}
+
+	return data, nil
+}

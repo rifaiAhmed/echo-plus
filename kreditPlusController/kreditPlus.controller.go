@@ -18,3 +18,9 @@ func GetCustomer(c echo.Context) error {
 
 	return c.JSON(http.StatusOK, result)
 }
+
+func CreateTransaction(c echo.Context) error {
+	result, _ := kreditPlusService.CreateTransaction(c)
+
+	return c.JSON(http.StatusOK, result)
+}

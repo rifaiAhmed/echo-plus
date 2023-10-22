@@ -1,6 +1,10 @@
 package models
 
-import "time"
+import (
+	"time"
+
+	"github.com/google/uuid"
+)
 
 type Consumer struct {
 	NIK       string
@@ -14,7 +18,8 @@ type Consumer struct {
 }
 
 type Transaction struct {
-	ContractNo   string
+	ContractNo   uuid.UUID
+	NIK          string
 	AssetType    string
 	OTR          float64
 	AdminFee     float64

@@ -24,6 +24,7 @@ func Init() *echo.Echo {
 	g.GET("/gen-token", controllers.GenerateToken)
 	g.GET("/check-limits", kreditPlusController.GetLimit, mid.IsAuthenticated)
 	g.GET("/get-customer", kreditPlusController.GetCustomer, mid.IsAuthenticated)
+	g.POST("/create-transaction", kreditPlusController.CreateTransaction, mid.IsAuthenticated)
 
 	return e
 }
