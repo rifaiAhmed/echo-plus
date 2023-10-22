@@ -1,0 +1,8 @@
+{
+    "DB_USERNAME" : "wmsusr",
+	"DB_PASSWORD" : "wms@usr2021",
+	"DB_PORT"     : "8191",
+	"DB_HOST"     : "172.16.1.13",
+	"DB_NAME"     : "dbwms",
+	"DB_SCHEMA"   : "authorization, public"
+}

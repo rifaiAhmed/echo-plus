@@ -1,0 +1,7 @@
+{
+    "DB_USERNAME" : "fashion2016",
+	"DB_PASSWORD" : "f4shionRals",
+	"DB_PORT"     : "1521",
+	"DB_HOST"     : "172.16.1.234",
+	"DB_SERVICE_NAME"     : "pusat"
+}
