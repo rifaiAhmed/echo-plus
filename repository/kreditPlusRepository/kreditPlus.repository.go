@@ -1,5 +1,7 @@
 package kreditPlusRepository
 
+// fai
+
 import (
 	"test-echo/db"
 	models "test-echo/model"
